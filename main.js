@@ -1,31 +1,34 @@
-AOS.init({
-  once: true,
-  duration: 1000
-});
-
-/* NAVBAR SCROLL */
+// Navbar scroll effect
+const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
-  document.getElementById('navbar')
-    .classList.toggle('scrolled', window.scrollY > 100);
+  navbar.classList.toggle('scrolled', window.scrollY > 80);
 });
 
-/* MOBILE MENU */
-const toggle = document.getElementById('menu-toggle');
-const menu = document.getElementById('mobile-menu');
+// Mobile menu
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
 const backdrop = document.getElementById('backdrop');
+const closeBtn = document.getElementById('close-menu');
 
-toggle.addEventListener('click', () => {
-  menu.classList.toggle('translate-x-full');
-  backdrop.classList.toggle('opacity-0');
-  backdrop.classList.toggle('pointer-events-none');
+function openMenu() {
+  mobileMenu.classList.add('open');
+  backdrop.classList.add('visible');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeMenu() {
+  mobileMenu.classList.remove('open');
+  backdrop.classList.remove('visible');
+  document.body.style.overflow = '';
+}
+
+menuToggle.addEventListener('click', () => {
+  mobileMenu.classList.contains('open') ? closeMenu() : openMenu();
 });
+closeBtn.addEventListener('click', closeMenu);
+backdrop.addEventListener('click', closeMenu);
 
-backdrop.addEventListener('click', () => {
-  menu.classList.add('translate-x-full');
-  backdrop.classList.add('opacity-0','pointer-events-none');
-});
-
-/* GSAP HERO */
+// GSAP hero animations
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.from(".hero-line", {
@@ -33,13 +36,25 @@ gsap.from(".hero-line", {
   opacity: 0,
   duration: 1.5,
   stagger: 0.4,
-  ease: "power4.out"
+  ease: "power4.out",
+  delay: 0.5
 });
 
-gsap.from(".hero-sub,.hero-ctas", {
-  y: 80,
+gsap.from(".hero-subtitle, .hero-buttons", {
+  y: 70,
   opacity: 0,
-  duration: 1.2,
-  delay: 1.5,
+  duration: 1.3,
+  stagger: 0.3,
+  ease: "power3.out",
+  delay: 1.5
+});
+
+gsap.to(".hero-line", {
+  y: "-=15",
+  rotation: 1.2,
+  duration: 7,
+  ease: "sine.inOut",
+  repeat: -1,
+  yoyo: true,
   stagger: 0.3
 });
