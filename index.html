@@ -4,22 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>InstaStrategix | Next-Gen Instagram Growth Agency 2026</title>
-
   <meta name="description" content="AI-powered Instagram strategies, viral Reels, hyper-targeted ads — scale your brand in 2026 style."/>
 
-  <!-- Tailwind CDN -->
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Google Fonts -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-  <!-- GSAP -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css">
@@ -27,101 +21,82 @@
 
 <body>
 
-  <!-- Navbar -->
-  <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 bg-black/20 backdrop-blur-2xl border-b border-white/10">
-    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-      <a href="#" class="text-4xl font-extrabold bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 bg-clip-text text-transparent tracking-tight hover:scale-105 transition">
-        InstaStrategix
-      </a>
+<!-- NAVBAR -->
+<nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 bg-black/20 backdrop-blur-2xl border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+    <a href="#" class="text-4xl font-extrabold bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 bg-clip-text text-transparent">
+      InstaStrategix
+    </a>
 
-      <div class="hidden md:flex space-x-12 items-center">
-        <a href="#services" class="nav-link">Services</a>
-        <a href="#why-us" class="nav-link">Why Us</a>
-        <a href="#contact" class="nav-cta">Launch Growth →</a>
-      </div>
-
-      <button id="menu-toggle" class="md:hidden text-white z-60 relative">
-        <svg id="hamburger" class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path id="top" stroke-linecap="round" stroke-width="2.5" d="M4 6h16"></path>
-          <path id="middle" stroke-linecap="round" stroke-width="2.5" d="M4 12h16"></path>
-          <path id="bottom" stroke-linecap="round" stroke-width="2.5" d="M4 18h16"></path>
-        </svg>
-      </button>
+    <div class="hidden md:flex space-x-12 items-center">
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#why-us" class="nav-link">Why Us</a>
+      <a href="#contact" class="cta-btn">Launch Growth →</a>
     </div>
-  </nav>
 
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="fixed inset-y-0 right-0 z-50 w-4/5 max-w-sm bg-black/80 backdrop-blur-2xl border-l border-white/10 transform translate-x-full md:hidden">
-    <button id="close-menu" class="absolute top-6 right-6 text-white">
-      ✕
+    <button id="menu-toggle" class="md:hidden text-white z-50">
+      <svg id="hamburger" class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-width="2.5" stroke-linecap="round" d="M4 6h16"/>
+        <path stroke-width="2.5" stroke-linecap="round" d="M4 12h16"/>
+        <path stroke-width="2.5" stroke-linecap="round" d="M4 18h16"/>
+      </svg>
     </button>
+  </div>
+</nav>
 
-    <div class="flex flex-col h-full pt-20 px-8 text-center space-y-10">
-      <a href="#services" onclick="closeMenu()" class="mobile-link">Services</a>
-      <a href="#why-us" onclick="closeMenu()" class="mobile-link">Why Us</a>
-      <a href="#contact" onclick="closeMenu()" class="mobile-cta">Launch Growth →</a>
+<!-- MOBILE MENU -->
+<div id="mobile-menu" class="fixed inset-y-0 right-0 w-4/5 max-w-sm bg-black/90 backdrop-blur-2xl transform translate-x-full z-40 md:hidden">
+  <div class="flex flex-col h-full pt-24 px-8 space-y-10 text-center">
+    <a href="#services" class="mobile-link">Services</a>
+    <a href="#why-us" class="mobile-link">Why Us</a>
+    <a href="#contact" class="mobile-cta">Launch Growth →</a>
+  </div>
+</div>
+
+<div id="backdrop" class="fixed inset-0 bg-black/60 opacity-0 pointer-events-none z-30 md:hidden"></div>
+
+<!-- HERO -->
+<section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-purple-950 via-pink-900 to-cyan-950">
+  <div class="hero-bg animate-pulse-slow"></div>
+
+  <div class="max-w-6xl mx-auto px-6 text-center z-10">
+    <h1 class="text-6xl md:text-9xl font-extrabold mb-8 leading-none">
+      <span class="hero-line">Explode Your Instagram</span>
+      <span class="hero-line text-5xl md:text-7xl">in 2026</span>
+    </h1>
+
+    <p class="hero-sub text-2xl md:text-3xl mb-12">
+      AI-driven Reels, viral growth hacks, ROAS-max ads — we turn followers into revenue machines.
+    </p>
+
+    <div class="hero-ctas flex flex-col md:flex-row gap-6 justify-center">
+      <a href="#contact" class="hero-btn-primary">Claim Free AI Growth Audit →</a>
+      <a href="#services" class="hero-btn-secondary">Explore Arsenal</a>
     </div>
   </div>
+</section>
 
-  <div id="backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 opacity-0 pointer-events-none md:hidden"></div>
+<!-- SERVICES -->
+<section id="services" class="py-24 bg-black/50">
+  <h2 class="section-title" data-aos="zoom-in">Our 2026 Arsenal</h2>
+</section>
 
-  <!-- Hero -->
-  <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-purple-950 via-pink-900 to-cyan-950">
-    <div class="hero-bg"></div>
+<!-- WHY US -->
+<section id="why-us" class="py-24 bg-gradient-to-b from-black to-purple-950">
+  <h2 class="section-title" data-aos="fade-up">Results That Speak 2026</h2>
+</section>
 
-    <div class="max-w-6xl mx-auto px-6 text-center relative z-10">
-      <h1 class="hero-title">
-        <span class="hero-line">Explode Your Instagram</span>
-        <span class="hero-subline">in 2026</span>
-      </h1>
+<footer class="py-12 bg-black/80 text-center border-t border-white/10">
+  © 2026 InstaStrategix • Let’s Grow
+</footer>
 
-      <p class="hero-sub">
-        AI-driven Reels, viral growth hacks, ROAS-max ads — we turn followers into revenue machines.
-      </p>
+<!-- LIBRARIES -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
-      <div class="hero-ctas">
-        <a href="#contact" class="primary-btn">Claim Free AI Growth Audit →</a>
-        <a href="#services" class="secondary-btn">Explore Arsenal</a>
-      </div>
-    </div>
-  </section>
+<!-- CUSTOM JS -->
+<script src="js/main.js"></script>
 
-  <!-- Services -->
-  <section id="services" class="py-24 bg-black/50">
-    <div class="max-w-7xl mx-auto px-6">
-      <h2 class="section-title" data-aos="zoom-in">Our 2026 Arsenal</h2>
-
-      <div class="grid md:grid-cols-3 gap-10">
-        <div class="glass card" data-aos="fade-right">
-          <h3 class="card-title pink">Viral Reels & Content</h3>
-          <p>Trend-jacking + AI-optimized hooks that explode reach organically.</p>
-        </div>
-
-        <div class="glass card" data-aos="fade-up">
-          <h3 class="card-title cyan">Meta Ads & Scaling</h3>
-          <p>Hyper-targeted campaigns with 5x+ ROAS — automated & creative.</p>
-        </div>
-
-        <div class="glass card" data-aos="fade-left">
-          <h3 class="card-title purple">Growth Systems</h3>
-          <p>Engagement loops, UGC strategies, community automation for sustained explosion.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Us -->
-  <section id="why-us" class="py-24 bg-gradient-to-b from-black to-purple-950">
-    <div class="max-w-7xl mx-auto px-6 text-center">
-      <h2 class="section-title alt" data-aos="fade-up">Results That Speak 2026</h2>
-    </div>
-  </section>
-
-  <footer class="py-12 bg-black/80 text-center border-t border-white/10">
-    © 2026 InstaStrategix • Bhopal's Next-Gen Instagram Agency
-  </footer>
-
-  <!-- Custom JS -->
-  <script src="js/main.js"></script>
 </body>
 </html>
