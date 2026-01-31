@@ -3,57 +3,43 @@ AOS.init({
   duration: 1000
 });
 
-// Navbar scroll effect
+/* NAVBAR SCROLL */
 window.addEventListener('scroll', () => {
   document.getElementById('navbar')
     .classList.toggle('scrolled', window.scrollY > 100);
 });
 
-// Mobile menu
+/* MOBILE MENU */
 const toggle = document.getElementById('menu-toggle');
 const menu = document.getElementById('mobile-menu');
 const backdrop = document.getElementById('backdrop');
-const closeBtn = document.getElementById('close-menu');
 
-function openMenu() {
-  menu.classList.remove('translate-x-full');
-  backdrop.classList.remove('opacity-0', 'pointer-events-none');
-}
+toggle.addEventListener('click', () => {
+  menu.classList.toggle('translate-x-full');
+  backdrop.classList.toggle('opacity-0');
+  backdrop.classList.toggle('pointer-events-none');
+});
 
-function closeMenu() {
+backdrop.addEventListener('click', () => {
   menu.classList.add('translate-x-full');
-  backdrop.classList.add('opacity-0', 'pointer-events-none');
-}
+  backdrop.classList.add('opacity-0','pointer-events-none');
+});
 
-toggle.addEventListener('click', openMenu);
-closeBtn.addEventListener('click', closeMenu);
-backdrop.addEventListener('click', closeMenu);
-
-// GSAP
+/* GSAP HERO */
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.from(".hero-line", {
-  y: 140,
+  y: 120,
   opacity: 0,
   duration: 1.5,
-  ease: "power4.out",
-  delay: 0.5
+  stagger: 0.4,
+  ease: "power4.out"
 });
 
-gsap.from(".hero-sub, .hero-ctas", {
+gsap.from(".hero-sub,.hero-ctas", {
   y: 80,
   opacity: 0,
   duration: 1.2,
-  stagger: 0.3,
-  delay: 1.8
-});
-
-gsap.to(".hero-bg", {
-  y: "30%",
-  scrollTrigger: {
-    trigger: "#hero",
-    start: "top top",
-    end: "bottom top",
-    scrub: true
-  }
+  delay: 1.5,
+  stagger: 0.3
 });
