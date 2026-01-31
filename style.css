@@ -1,0 +1,41 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0a0a1f;
+  color: white;
+}
+
+h1, h2, h3 {
+  font-family: 'Sora', sans-serif;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 15s ease-in-out infinite;
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 0.9; transform: scale(1.05); }
+}
+
+/* Mobile menu easing */
+#mobile-menu {
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#mobile-menu:not(.translate-x-full) {
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Hamburger polish */
+#hamburger path {
+  transition: all 0.5s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+
+#menu-toggle:hover svg {
+  filter: drop-shadow(0 0 8px rgba(236,72,153,0.5));
+}
+
+#navbar.scrolled {
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(24px);
+}
