@@ -3,100 +3,292 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>InstaStrategix | Next-Gen Instagram Growth Agency 2026</title>
-  <meta name="description" content="AI-powered Instagram strategies, viral Reels, hyper-targeted ads — scale your brand in 2026 style."/>
+  <meta name="description" content="Instastrategix is a premium digital marketing agency helping small businesses, coaches, and startups grow with branding, websites, and marketing strategies."/>
+  <meta name="keywords" content="digital marketing agency, branding, website design, social media marketing, small business growth"/>
+  <title>InstaStrategix</title>
 
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
-
 <body>
 
-<!-- NAVBAR -->
-<nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 bg-black/20 backdrop-blur-2xl border-b border-white/10">
-  <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-    <a href="#" class="text-4xl font-extrabold bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 bg-clip-text text-transparent">
-      InstaStrategix
-    </a>
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/instastrategix-logo.png" alt="InstaStrategix Logo">
+          <span class="logo-text">InstaStrategix</span>
+          <span class="logo-tagline">Digital Marketing Agency</span>
+        </a>
+      </div>
 
-    <div class="hidden md:flex space-x-12 items-center">
-      <a href="#services" class="nav-link">Services</a>
-      <a href="#why-us" class="nav-link">Why Us</a>
-      <a href="#contact" class="cta-btn">Launch Growth →</a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <nav class="nav-menu desktop-nav" id="nav-menu">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about-us.html" class="nav-link">About Us</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="founder.html" class="nav-link">Founder</a>
+        <a href="contact-us.html" class="nav-link">Contact Us</a>
+        <a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
+      </nav>
+
+      <a href="contact-us.html" class="nav-cta btn-primary">Get in Touch</a>
     </div>
+  </nav>
 
-    <button id="menu-toggle" class="md:hidden text-white z-50">
-      <svg id="hamburger" class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-width="2.5" stroke-linecap="round" d="M4 6h16"/>
-        <path stroke-width="2.5" stroke-linecap="round" d="M4 12h16"/>
-        <path stroke-width="2.5" stroke-linecap="round" d="M4 18h16"/>
-      </svg>
+  <!-- Mobile Slide Menu -->
+  <div id="mobile-menu" class="mobile-menu">
+    <button id="close-menu" class="close-btn">
+      <i class="fas fa-times"></i>
     </button>
-  </div>
-</nav>
-
-<!-- MOBILE MENU -->
-<div id="mobile-menu" class="fixed inset-y-0 right-0 w-4/5 max-w-sm bg-black/90 backdrop-blur-2xl transform translate-x-full z-40 md:hidden">
-  <div class="flex flex-col h-full pt-24 px-8 space-y-10 text-center">
-    <a href="#services" class="mobile-link">Services</a>
-    <a href="#why-us" class="mobile-link">Why Us</a>
-    <a href="#contact" class="mobile-cta">Launch Growth →</a>
-  </div>
-</div>
-
-<div id="backdrop" class="fixed inset-0 bg-black/60 opacity-0 pointer-events-none z-30 md:hidden"></div>
-
-<!-- HERO -->
-<section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-purple-950 via-pink-900 to-cyan-950">
-  <div class="hero-bg animate-pulse-slow"></div>
-
-  <div class="max-w-6xl mx-auto px-6 text-center z-10">
-    <h1 class="text-6xl md:text-9xl font-extrabold mb-8 leading-none">
-      <span class="hero-line">Explode Your Instagram</span>
-      <span class="hero-line text-5xl md:text-7xl">in 2026</span>
-    </h1>
-
-    <p class="hero-sub text-2xl md:text-3xl mb-12">
-      AI-driven Reels, viral growth hacks, ROAS-max ads — we turn followers into revenue machines.
-    </p>
-
-    <div class="hero-ctas flex flex-col md:flex-row gap-6 justify-center">
-      <a href="#contact" class="hero-btn-primary">Claim Free AI Growth Audit →</a>
-      <a href="#services" class="hero-btn-secondary">Explore Arsenal</a>
+    <div class="mobile-links">
+      <a href="index.html" class="mobile-link active">Home</a>
+      <a href="about-us.html" class="mobile-link">About Us</a>
+      <a href="services.html" class="mobile-link">Services</a>
+      <a href="founder.html" class="mobile-link">Founder</a>
+      <a href="contact-us.html" class="mobile-link">Contact Us</a>
+      <a href="privacy-policy.html" class="mobile-link">Privacy Policy</a>
+      <a href="contact-us.html" class="mobile-cta btn-primary">Get in Touch</a>
     </div>
   </div>
-</section>
 
-<!-- SERVICES -->
-<section id="services" class="py-24 bg-black/50">
-  <h2 class="section-title" data-aos="zoom-in">Our 2026 Arsenal</h2>
-</section>
+  <div id="backdrop" class="backdrop"></div>
 
-<!-- WHY US -->
-<section id="why-us" class="py-24 bg-gradient-to-b from-black to-purple-950">
-  <h2 class="section-title" data-aos="fade-up">Results That Speak 2026</h2>
-</section>
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1 class="hero-title">
+        <span class="hero-line">Your Digital Growth,</span>
+        <span class="hero-line secondary">Our Strategy</span>
+      </h1>
+      <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="600">
+        We help small businesses, coaches, and startups grow with branding, websites, and powerful marketing strategies.
+      </p>
+      <div class="hero-buttons" data-aos="fade-up" data-aos-delay="900">
+        <a href="contact-us.html" class="btn btn-primary">Get Started</a>
+        <a href="services.html" class="btn btn-outline">Explore Services</a>
+      </div>
+    </div>
+  </section>
 
-<footer class="py-12 bg-black/80 text-center border-t border-white/10">
-  © 2026 InstaStrategix • Let’s Grow
-</footer>
+  <!-- Welcome Section -->
+  <section class="section-padding welcome-section">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <h2 class="section-title">Welcome to InstaStrategix</h2>
+        <p class="section-subtitle">Your Digital Growth, Our Strategy</p>
+      </div>
 
-<!-- LIBRARIES -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+      <p class="intro-text text-center" data-aos="fade-up" data-aos-delay="200">
+        At <strong>InstaStrategix</strong>, we turn ideas into impact. We help businesses grow, engage, and thrive online through smart digital marketing solutions that work. From social media mastery and SEO to Google Ads and content strategy, we craft campaigns that deliver measurable results.
+      </p>
 
-<!-- CUSTOM JS -->
-<script src="js/main.js"></script>
+      <h3 class="text-center section-subtitle" data-aos="fade-up" data-aos-delay="400">What We Do</h3>
+      <div class="cards-grid">
+        <div class="info-card glass" data-aos="fade-up" data-aos-delay="100">
+          <i class="fas fa-chart-line card-icon"></i>
+          <h4>Social Media Management</h4>
+          <p>Build a loyal audience, boost engagement, and grow your brand presence.</p>
+        </div>
+        <div class="info-card glass" data-aos="fade-up" data-aos-delay="200">
+          <i class="fas fa-search card-icon"></i>
+          <h4>SEO & Website Optimization</h4>
+          <p>Rank higher, get discovered, and drive organic traffic.</p>
+        </div>
+        <div class="info-card glass" data-aos="fade-up" data-aos-delay="300">
+          <i class="fas fa-bullseye card-icon"></i>
+          <h4>Google Ads & Paid Campaigns</h4>
+          <p>Reach the right audience, maximize ROI, and accelerate growth.</p>
+        </div>
+        <div class="info-card glass" data-aos="fade-up" data-aos-delay="400">
+          <i class="fas fa-pen-nib card-icon"></i>
+          <h4>Content Marketing</h4>
+          <p>Compelling content that tells your brand story and converts visitors into customers.</p>
+        </div>
+      </div>
 
+      <h3 class="text-center section-subtitle" data-aos="fade-up" data-aos-delay="600">Why Choose InstaStrategix?</h3>
+      <div class="cards-grid">
+        <div class="info-card glass" data-aos="fade-up" data-aos-delay="100">
+          <i class="fas fa-chart-pie card-icon"></i>
+          <h4>Data-Driven Strategies</h4>
+          <p>Every decision backed by insights and analytics.</p>
+        </div>
+        <div class="info-card glass" data-aos="fade-up" data-aos-delay="200">
+          <i class="fas fa-lightbulb card-icon"></i>
+          <h4>Creative Excellence</h4>
+          <p>Innovative campaigns that captivate your audience.</p>
+        </div>
+        <div class="info-card glass" data-aos="fade-up" data-aos-delay="300">
+          <i class="fas fa-trophy card-icon"></i>
+          <h4>Proven Results</h4>
+          <p>Growth-focused strategies tailored to your brand.</p>
+        </div>
+        <div class="info-card glass" data-aos="fade-up" data-aos-delay="400">
+          <i class="fas fa-handshake card-icon"></i>
+          <h4>Personalized Approach</h4>
+          <p>Your goals become our mission.</p>
+        </div>
+      </div>
+
+      <div class="cta-wrapper text-center" data-aos="fade-up" data-aos-delay="800">
+        <h3>Let’s Grow Together</h3>
+        <p>Ready to take your brand to the next level? Partner with InstaStrategix and watch your digital presence transform into measurable growth.</p>
+        <a href="contact-us.html" class="btn btn-primary">Get Started</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Preview -->
+  <section class="section-padding services-preview">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <h2 class="section-title">Our Core Services</h2>
+        <p class="section-subtitle">Everything you need to build, grow, and scale your brand</p>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card glass animate-hover" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-icon"><i class="fas fa-palette"></i></div>
+          <h3>Branding & Design</h3>
+          <p>Logos, creatives, and visual systems that build trust and recognition.</p>
+          <a href="services.html#graphic-design" class="btn-text">Learn More →</a>
+        </article>
+
+        <article class="service-card glass animate-hover" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+          <h3>Website Design</h3>
+          <p>Modern, responsive websites optimized for conversion and performance.</p>
+          <a href="services.html#web-design" class="btn-text">Learn More →</a>
+        </article>
+
+        <article class="service-card glass animate-hover" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
+          <h3>Social Media Marketing</h3>
+          <p>Data-driven strategies that grow engagement and generate leads.</p>
+          <a href="services.html#social-media" class="btn-text">Learn More →</a>
+        </article>
+      </div>
+
+      <div class="section-cta text-center" data-aos="fade-up" data-aos-delay="500">
+        <a href="services.html" class="btn btn-secondary">View All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof -->
+  <section class="social-proof">
+    <div class="container">
+      <div class="proof-grid">
+        <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
+          <span class="stat-number">100+</span>
+          <span class="stat-label">Projects Delivered</span>
+        </div>
+        <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
+          <span class="stat-number">95%</span>
+          <span class="stat-label">Client Satisfaction</span>
+        </div>
+        <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
+          <span class="stat-number">50+</span>
+          <span class="stat-label">Brands Scaled</span>
+        </div>
+        <div class="stat-item" data-aos="zoom-in" data-aos-delay="400">
+          <span class="stat-number">24/7</span>
+          <span class="stat-label">Client Support</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Integration -->
+  <section class="section-padding blog-integration">
+    <div class="container blog-content text-center" data-aos="fade-up">
+      <h2 class="section-title">Learn Digital Marketing</h2>
+      <p class="section-subtitle">
+        Actionable insights, strategies, and growth tips from industry experience
+      </p>
+      <p>
+        Visit our educational blog where we share proven strategies tailored for small businesses, coaches, and startups.
+      </p>
+      <a href="https://instastrategix0.blogspot.com/" target="_blank" class="btn btn-primary">
+        <i class="fas fa-book-open"></i> Visit Blog
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <svg viewBox="0 0 1200 100" preserveAspectRatio="none" class="wave-top">
+      <path d="M0,0 C600,100 600,0 1200,100 L1200,0 L0,0 Z" fill="#ffffff" fill-opacity="0.05"/>
+    </svg>
+
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h4>Founder</h4>
+        <p>Abhishek Choubey</p>
+        <ul>
+          <li><i class="fas fa-envelope"></i> <a href="mailto:instastrategixdigitalcreator@gmail.com">instastrategixdigitalcreator@gmail.com</a></li>
+          <li><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/instastrategix/" target="_blank">@instastrategix</a></li>
+          <li><i class="fas fa-blog"></i> <a href="https://instastrategix0.blogspot.com/" target="_blank">Digital Marketing Education</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="contact-us.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Connect With Us</h4>
+        <p>Follow us for tips, guides & updates!</p>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/instastrategix/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://instastrategix0.blogspot.com/" target="_blank"><i class="fas fa-blog"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Subscribe</h4>
+        <p>Get our latest marketing tips directly to your inbox:</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your email" required>
+          <button type="submit" class="btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © <span id="current-year"></span> InstaStrategix. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 1000 });
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
